@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="W6 Pay Calculator">
+    <meta name="author" content="Lennie Marino">
+    <title>Pay Calculator</title>
+</head>
+<body>
+    <h1>W6 Pay Calculator</h1>
+    <script>
+        var rate = Number(prompt(`Enter your hourly rate: $`))
+        rate = rate.toFixed(2)
+        
+        var hours = Number(prompt(`Enter your hours worked in the last two weeks: $`))
+        hours = hours.toFixed(2)
+        
+        
+
+      
+
+        var gross = rate * hours
+        gross = gross.toFixed(2)
+        
+
+        var tax = gross * 0.2
+        
+        tax = tax.toFixed(2)
+
+        var net = gross - tax
+
+        net = net.toFixed(2)
+        
+       
+
+        
+       
+
+        
+
+
+        alert(`Based on your hourly rate of $ ${rate} and ${hours} hours worked,\nGross pay:$ ${gross}\nUncle Sams share:$ ${tax}\nNet pay:$ ${net}`)
+        
+        console.log(`Gross Pay: $`,gross);
+        console.log(`Uncle Sams cut: $`,tax);
+        console.log(`Net Pay: $`,net);
+       
+
+
+      
+
+
+      
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
