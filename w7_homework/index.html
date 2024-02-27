@@ -194,7 +194,7 @@
          
         console.log(`${full}\n${gross.toFixed(2)}\n${taxAmount.toFixed(2)}\n${net.toFixed(2)}`)
 
-        var finalDisplay = `<p><b>Full Name:</b> ${full}<br>Hours: ${hours.toFixed(2)}<br>Rate: ${rate.toFixed(2)}<br><br>Gross:${gross.toFixed(2)}<br>Tax Amount${taxAmount.toFixed(2)}<br>Net:${net.toFixed(2)}</p> `
+        var finalDisplay = `<p><b>Full Name:</b> ${full}<br>Hours: ${hours.toFixed(2)}<br>Rate: ${rate.toFixed(2)}<br><br>Gross:${gross.toFixed(2)}<br>Tax Amount:${taxAmount.toFixed(2)}<br>Net:${net.toFixed(2)}</p> `
         var info = document.querySelector(`#info`)
 
         info.innerHTML = finalDisplay
@@ -226,7 +226,7 @@
             var net = gross - taxAmount
          
         
-             alert(`Full Name: ${full}\n Hours: ${hours.toFixed(2)}\n Net: ${net.toFixed(2)}\n\nGross Pay:${gross.toFixed(2)}\nTax Amount${taxAmount.toFixed(2)}\nNet Pay:${net.toFixed(2)}`)
+             alert(`Full Name: ${full}\n Hours: ${hours.toFixed(2)}\n Net: ${net.toFixed(2)}\n\nGross Pay:${gross.toFixed(2)}\nTax Amount:${taxAmount.toFixed(2)}\nNet Pay:${net.toFixed(2)}`)
         
         
 
