@@ -7,7 +7,11 @@
 
     <!--FILL OUT THE MISSING INFO-->
     <meta name="author" content="Lennie Marino">
+<<<<<<< HEAD
     <meta name="description" content="W7 HomeWork">
+=======
+    <meta name="description" content="W7 pay calculator">
+>>>>>>> 98a2160fc1b5fd09fe99b18582f5f0a1b42103b0
 
     <title>W7 | JS Pay Form</title>
 </head>
@@ -103,6 +107,10 @@
 
      <!--IN-DOCUMENT JAVASCRIPT BELOW-->
      <script>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 98a2160fc1b5fd09fe99b18582f5f0a1b42103b0
         //write JS in here
 
         //PART1-----selecting and storing HTML elements------------
@@ -114,6 +122,7 @@
             console.log() all of these elements once complete
 
         */
+<<<<<<< HEAD
 
          var body = document.querySelector(`body`)
          console.log(body)
@@ -145,6 +154,36 @@
            document.querySelector(`#enter-button`).addEventListener(`click`, formData)
            /* add an event listener to the #confirm-button that runs a function called "confirmForm"
         */ document.querySelector(`#confirm-button`).addEventListener(`click`, confirmFrom)
+=======
+        var body = document.querySelector(`#body`)
+        var h1 = document.querySelector(`#h1`)
+        var input = document.querySelector(`#input`)
+        var div = document.querySelector(`#div`)
+        var confirms = document.querySelector(`#confirm-button`)
+        var enter = document.querySelector(`#enter-button`)
+
+        console.log(body)
+        console.log(h1)
+        console.log(input)
+        console.log(div)
+        console.log(confirms)
+        console.log(enter)
+
+
+       
+
+        //PART2------adding event listeners------------------------
+        /*
+            add an event listener to the #enter-button that runs a function called "formData"
+
+            add an event listener to the #confirm-button that runs a function called "confirmForm"
+        */
+        document.querySelector(`#enter-button`).addEventListener(`click`, formData)
+
+        document.querySelector(`#confirm-button`).addEventListener(`click`, confirmData)
+
+        
+>>>>>>> 98a2160fc1b5fd09fe99b18582f5f0a1b42103b0
 
 
         //PART3------building event functions----------------------
@@ -172,16 +211,26 @@
 
         */
        function formData(event)
+<<<<<<< HEAD
        {var fname = document.querySelector(`#first`).value
         var lname = document.querySelector(`#last`).value
         var hours = document.querySelector(`#hours`).value
         var rate = document.querySelector(`#rate`).value
+=======
+       {
+        var fname = document.querySelector(`#first`).value
+        var lname = document.querySelector(`#last`).value
+        var hours = document.querySelector(`#hours`).value
+        var rate = document.querySelector(`#rate`).value
+
+>>>>>>> 98a2160fc1b5fd09fe99b18582f5f0a1b42103b0
         console.log(fname)
         console.log(lname)
         console.log(hours)
         console.log(rate)
 
         var full = fname + ` ` + lname
+<<<<<<< HEAD
         console.log(full)
 
         var gross
@@ -197,6 +246,61 @@
 
        function confirmData(event)
        {
+=======
+
+        console.log(full)
+
+        hours = Number(hours)
+        rate = Number(rate)
+
+        var gross = hours * rate
+        var taxAmount = gross * .2
+        var net = gross - taxAmount
+         
+        console.log(`${full}\n${gross.toFixed(2)}\n${taxAmount.toFixed(2)}\n${net.toFixed(2)}`)
+
+        var finalDisplay = `<p><b>Full Name:</b> ${full}<br>Hours: ${hours.toFixed(2)}<br>Rate:$ ${rate.toFixed(2)}<br><br>Gross:$${gross.toFixed(2)}<br>Tax Amount:$${taxAmount.toFixed(2)}<br>Net$:${net.toFixed(2)}</p> `
+        var info = document.querySelector(`#info`)
+
+        info.innerHTML = finalDisplay
+
+
+        
+
+       }//formData()
+
+       
+            
+       
+        
+
+       function confirmData(event)
+       {
+            var fname = document.querySelector(`#first`).value
+            var lname = document.querySelector(`#last`).value
+            var hours = document.querySelector(`#hours`).value
+            var rate = document.querySelector(`#rate`).value
+
+            var full = fname + ` ` + lname
+
+            hours = Number(hours)
+            rate = Number(rate)
+
+            var gross = hours * rate
+            var taxAmount = gross * .2
+            var net = gross - taxAmount
+         
+        
+             alert(`Full Name: ${full}\n Hours: ${hours.toFixed(2)}\n Rate:$ ${rate.toFixed(2)}\n\nGross Pay:$${gross.toFixed(2)}\nTax Amount:$${taxAmount.toFixed(2)}\nNet Pay:$${net.toFixed(2)}`)
+        
+        
+
+
+
+
+
+
+>>>>>>> 98a2160fc1b5fd09fe99b18582f5f0a1b42103b0
 
        }//confirmData()
 
