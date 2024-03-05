@@ -22,7 +22,7 @@
       
 
         var gross = rate * hours
-        gross = gross.toFixed(2)
+        //gross = gross.toFixed(2)
         
 
         var tax = gross * 0.2
@@ -41,7 +41,7 @@
         
 
 
-        alert(`Based on your hourly rate of $ ${rate} and ${hours} hours worked,\nGross pay:$ ${gross}\nUncle Sams share:$ ${tax}\nNet pay:$ ${net}`)
+        alert(`Based on your hourly rate of $ ${rate} and ${hours} hours worked,\nGross pay:$ ${gross.toFixed(2)}\nUncle Sams share:$ ${tax}\nNet pay:$ ${net}`)
         
         console.log(`Gross Pay: $`,gross);
         console.log(`Uncle Sams cut: $`,tax);
