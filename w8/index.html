@@ -44,7 +44,7 @@
 		
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
+		document.querySelector(`#button`).addEventListener(`click`,calcAndDisplay )
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -65,20 +65,25 @@
 		{
 			//Create an object called person.
 			//Add the following properties:
-			    //1. first: will be a string that uses the first Input's value
-				//2. last: will be a string that uses the last Input's value
-
-            var person = {
-
-
-
-            }//end of person object
+			//1. first: will be a string that uses the first Input's value
+			//2. last: will be a string that uses the last Input's value
+             var people = [
+				{first:``},
+				{last:`` },
+				
+				
+				
+				
+				
+			
+			]//end of person object
 
 
 
 
 			//Add the person object into the people array by using the .push() array method.
-			
+			people.push(prompt(`Enter a Name: `))
+			console.log(`Array: ${people}`)
 
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
@@ -95,33 +100,40 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
-			
+			console.log(`Array: ${people}`)
+			console.log(`First value of array: ${people[0]}`)
+			console.log(`The lenght of the people in the array: ${people.length}`)
 
 			//create a variable called 'output' that has an empty string value stored to 
-			
+			var output = ``
 
 			//Loop through the objects in the people array
-			for()
+			for(let i = 0; i < people.length; i++)
             {
+				output += `<h3>Info for ${people[i].first} :</h3>`
 
 				//Loop through each property in the object
-				for(key in people[i])
+				for(let key in people[i])
                 {
 					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
+					output += `<p><b>${key.toUpperCase()}</b>: ${people[i][key]}</p>`
+					
 				
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
+				output += `<hr>`
 
 
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
+				console.log(`output`)
+				document.querySelector(`#output`).innerHTML = output
 				
 
 
